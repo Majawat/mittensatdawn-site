@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mittens at Dawn - A Cozy Snowball Skirmish</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-sphere"></div>
+        <span class="logo-text">Mittens <span class="highlight">at Dawn</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#play">How it Plays</a>
+        <a href="#factions">Factions</a>
+        <a href="#start" class="btn-nav">Read the Rules</a>
+      </div>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="section-badge">A Cozy Snowball Skirmish</div>
+          <h1 class="hero-title">Mittens <span class="highlight">at Dawn</span></h1>
+          <p class="hero-tagline">
+            The wargame for people who'd <em class="italic-highlight">never</em> play a wargame.
+          </p>
+          <p class="hero-description">
+            Cute miniatures to paint. No 200-page tome. No one gets knocked out, they just get a
+            little cold and head in for cocoa.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#start" class="btn-primary">Read the Rules</a>
+            <a href="#start" class="btn-secondary">Try the Companion App</a>
+          </div>
+          <p class="hero-meta">
+            Free forever &nbsp;·&nbsp; 2-4 players &nbsp;·&nbsp; one snowy afternoon
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="art-placeholder-box hero-art">
+            <span class="art-label"
+              >CHARACTER ART · hero portrait of the two team captains, mittens up</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="snow-layer"></div>
+
+      <div class="hero-sun-glow"></div>
+      <svg viewBox="0 0 1440 110" preserveAspectRatio="none" class="snowbank-divider">
+        <path
+          d="M0,60 C 260,20 520,80 760,50 C 1000,22 1240,70 1440,44 L1440,110 L0,110 Z"
+          fill="#f4ecdd"></path>
+      </svg>
+    </header>
+
+    <section id="play" class="plays-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge-orange">How it Plays</div>
+          <h2 class="section-title">It's a snowball fight.<br />That's the whole pitch.</h2>
+          <p class="section-subtitle">
+            If you can build a snowman, you already know the rules. Here's everything you actually
+            need to remember.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="feature-card">
+            <div class="card-icon icon-blue">
+              <div class="icon-circle"></div>
+            </div>
+            <h3 class="card-title">Pack &amp; throw</h3>
+            <p class="card-text">
+              Measure a toss with a ruler, lob your snowball, and hope it lands. Range is something
+              you eyeball, not a calculator.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="card-icon icon-orange">
+              <div class="icon-diamond"></div>
+            </div>
+            <h3 class="card-title">Nobody gets knocked out</h3>
+            <p class="card-text">
+              Take enough hits and you're <strong>Frozen</strong>: warm up by the fire, sit out a
+              turn, hop right back in. No characters ever leave the table.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="card-icon icon-blue">
+              <div class="icon-ring"></div>
+            </div>
+            <h3 class="card-title">The cold is the clock</h3>
+            <p class="card-text">
+              Each round the chill creeps up a notch. When your whole crew is too cold to keep
+              going, you call it and head inside for cocoa.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="card-icon icon-orange">
+              <div class="icon-star">★</div>
+            </div>
+            <h3 class="card-title">Last clique outside wins</h3>
+            <p class="card-text">
+              No kill counts. No dice tables to memorize. Whichever team is still out in the snow
+              gets bragging rights. Until tomorrow, anyway.
+            </p>
+          </div>
+        </div>
+
+        <div class="pitch-banner">
+          <p class="banner-text">
+            No rulebook the size of a phone book. No one dies. Truly, it's just a snow day with
+            sides.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="factions" class="factions-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge-orange">Choose your Clique</div>
+          <h2 class="section-title">Two teams. One playground.<br />Zero chill.</h2>
+          <p class="section-subtitle">
+            Same recess, opposite philosophies. Pick the side that plays the way you do.
+          </p>
+        </div>
+
+        <div class="factions-grid">
+          <div class="faction-card variant-misfits">
+            <div class="faction-art pattern-misfits">
+              <div class="faction-glow"></div>
+              <span class="art-label color-misfits"
+                >CHARACTER ART · the Misfits mid-ambush, mismatched mittens</span
+              >
+            </div>
+            <div class="faction-content">
+              <div class="faction-badge badge-misfits">Scrappy Underdogs</div>
+              <h3 class="faction-title">The Mudroom Misfits</h3>
+              <p class="faction-text">
+                Mismatched mittens, bottomless pockets, and a snowball already in hand. They don't
+                plan. They pounce, scatter, and pounce again before you've looked up.
+              </p>
+              <div class="tag-group">
+                <span class="tag tag-misfits">Ambush</span>
+                <span class="tag tag-misfits">Improvise</span>
+                <span class="tag tag-misfits">Outnumbered &amp; loving it</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="faction-card variant-monitors">
+            <div class="faction-art pattern-monitors">
+              <div class="faction-glow"></div>
+              <span class="art-label color-monitors"
+                >CHARACTER ART · the Hall Monitors in formation behind a tidy fort</span
+              >
+            </div>
+            <div class="faction-content">
+              <div class="faction-badge badge-monitors">Disciplined Defenders</div>
+              <h3 class="faction-title">The Hall Monitors</h3>
+              <p class="faction-text">
+                Matching scarves, tidy forts, and a laminated schedule for everything. They hold the
+                line, ration their snowballs, and wait for you to make the first mistake.
+              </p>
+              <div class="tag-group">
+                <span class="tag tag-monitors">Formation</span>
+                <span class="tag tag-monitors">Fortify</span>
+                <span class="tag tag-monitors">Endless patience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="factions-footer-note">
+          More cliques are out building forts. New teams drop soon!
+        </p>
+      </div>
+    </section>
+
+    <section id="start" class="cta-section">
+      <div class="cta-glow"></div>
+      <div class="cta-container">
+        <div class="section-badge-brown">Grab your mittens</div>
+        <h2 class="cta-title">Come in from the cold.</h2>
+        <p class="cta-text">
+          The full rules are free, and the companion app tracks the cold so you don't have to. Round
+          up some friends and a fresh snowfall.
+        </p>
+        <div class="cta-btn-group">
+          <a href="#start" class="btn-cta-white">Read the Rules</a>
+          <a href="#start" class="btn-cta-orange">Start Playing</a>
+        </div>
+        <p class="cta-meta">No account &nbsp;·&nbsp; no cost &nbsp;·&nbsp; no casualties</p>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-logo">
+        <div class="footer-sphere"></div>
+        <span class="footer-title">Mittens at Dawn</span>
+      </div>
+      <p class="footer-copyright">Made for snow days. Free forever.</p>
+      <div class="footer-links">
+        <a href="#play">How it Plays</a>
+        <a href="#factions">Factions</a>
+        <a href="#start" class="footer-highlight-link">Read the Rules</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

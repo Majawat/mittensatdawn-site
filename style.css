@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
 
 /* --- GLOBAL STYLES & RESET --- */
 * {
@@ -6,88 +6,25 @@
   margin: 0;
   padding: 0;
 }
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-family: "Nunito", sans-serif;
   color: #2c3742;
-  background: #d7e0e8;
+  background: linear-gradient(
+    177deg,
+    #2f3c54 0%,
+    #455872 36%,
+    #7d8fa0 58%,
+    #d9b68a 80%,
+    #f3b873 92%,
+    #f9cd92 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
 }
-a,
-nav span {
-  white-space: nowrap;
-}
 
-/* --- TYPOGRAPHY UTILITIES --- */
-.section-badge {
-  display: inline-block;
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 3px;
-  color: #ffd89f;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-.section-badge-orange {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 3px;
-  color: #d98b3e;
-  text-transform: uppercase;
-}
-.section-badge-brown {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 3px;
-  color: #a35f22;
-  text-transform: uppercase;
-}
-
-/* --- BUTTONS --- */
-.btn-nav {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: #5b3a1e;
-  text-decoration: none;
-  background: linear-gradient(180deg, #ffce86, #f6a84e);
-  padding: 9px 18px;
-  border-radius: 999px;
-  box-shadow:
-    0 4px 14px rgba(225, 140, 50, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-.btn-primary {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: #5b3a1e;
-  text-decoration: none;
-  background: linear-gradient(180deg, #ffce86, #f3a247);
-  padding: 15px 30px;
-  border-radius: 999px;
-  box-shadow:
-    0 8px 22px rgba(225, 140, 50, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55);
-}
-.btn-secondary {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
-  padding: 15px 28px;
-  border-radius: 999px;
-}
-
-/* --- NAVIGATION HEADER --- */
+/* --- BRAND HEADER --- */
 .navbar {
   position: absolute;
   top: 0;
@@ -96,8 +33,8 @@ nav span {
   z-index: 30;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 22px clamp(20px, 5vw, 64px);
+  justify-content: center;
+  padding: 15px 20px;
 }
 .nav-logo {
   display: flex;
@@ -116,549 +53,194 @@ nav span {
 .logo-text {
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 3em;
   color: #fff;
   letter-spacing: 0.2px;
   text-shadow: 0 1px 10px rgba(20, 30, 45, 0.4);
 }
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: clamp(14px, 2.5vw, 30px);
-}
-.nav-links a:not(.btn-nav) {
-  font-weight: 700;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.92);
-  text-decoration: none;
-  text-shadow: 0 1px 8px rgba(20, 30, 45, 0.4);
+
+.highlight {
+  color: #ffce86;
 }
 
-/* --- HERO COMPONENT --- */
-.hero-section {
+/* --- CONSTRUCTION BOX PANEL --- */
+.construction-container {
   position: relative;
-  min-height: clamp(700px, 95vh, 1010px);
-  background: linear-gradient(176deg, #1e2733 0%, rgba(51, 62, 77, 0.37) 40%, #565e66 100%);
-  overflow: hidden;
+  z-index: 10;
+  background: rgba(43, 56, 74, 0.96); /* Deep dark slate blue */
+  border: 2px solid rgba(255, 206, 134, 0.3); /* Soft gold glowing border */
+  border-radius: 28px;
+  max-width: 580px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(10, 15, 25, 0.5);
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  min-height: clamp(700px, 95vh, 1010px);
+
+/* Cozy Retro Hazard Stripe Borders */
+.hazard-stripes {
+  height: 14px;
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 4px;
+  background: repeating-linear-gradient(-45deg, #e1853a, #e1853a 15px, #ffce86 15px, #ffce86 30px);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-.hero-left {
-  position: relative;
-  z-index: 6;
+
+.construction-title {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 42px);
+  color: #ffffff;
+  margin: 16px 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.construction-text {
+  font-size: 16.5px;
+  color: #cedae5;
+  line-height: 1.6;
+  max-width: 460px;
+  margin: 0 auto 26px;
+}
+
+/* --- 90S DIGIT COUNTER BOX --- */
+.counter-box {
+  background: #313f54;
+  padding: 14px 20px;
+  border-radius: 14px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 28px;
+}
+.counter-label {
+  font-family: "Fredoka", sans-serif;
+  font-size: 12px;
+  color: #ffce86;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+.counter-digits {
+  display: flex;
+  gap: 4px;
+}
+.counter-digits span {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-weight: 800;
+  font-size: 22px;
+  background: #1e2735;
+  color: #e1853a;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-shadow: 0 0 6px rgba(225, 133, 58, 0.6);
+}
+
+/* --- EMAIL CAPTURE ZONE --- */
+
+.signup-zone {
+  display: none;
+}
+.signup-hint {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffce86;
+  margin-bottom: 12px;
+}
+.signup-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 100px clamp(28px, 5vw, 76px) 60px;
-  align-items: flex-start;
-}
-.hero-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
-  font-size: clamp(48px, 6.6vw, 104px);
-  line-height: 0.92;
-  color: #fff;
-  letter-spacing: -1px;
-  text-shadow: 0 5px 26px rgba(25, 35, 55, 0.45);
-}
-.hero-title .highlight {
-  color: #ffce86;
-}
-.hero-tagline {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: clamp(20px, 2.4vw, 30px);
-  color: #eef3f7;
-  margin: 26px 0 0;
-  max-width: 460px;
-  line-height: 1.28;
-}
-.hero-tagline .italic-highlight {
-  font-style: italic;
-  color: #ffce86;
-}
-.hero-description {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 430px;
-  margin: 18px 0 0;
-  line-height: 1.6;
-}
-.hero-cta-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 32px;
-}
-.hero-meta {
-  font-family: "Fredoka", sans-serif;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 22px;
-  letter-spacing: 0.3px;
-}
-.hero-right {
-  position: relative;
-  z-index: 6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 90px clamp(20px, 4vw, 60px) 60px;
-}
-.hero-sun-glow {
-  position: absolute;
-  inset: 0% 0% 0% 0%;
-  background: radial-gradient(circle at 60% 40%, rgba(255, 190, 115, 0.5), transparent 65%);
-  z-index: -1;
-}
-
-/* --- ART PLACEHOLDERS --- */
-.art-placeholder-box {
-  width: 100%;
-  border-radius: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 26px 35px rgba(30, 45, 70, 0.4);
-}
-.hero-art {
-  max-width: 460px;
-  height: 540px;
-  background: repeating-linear-gradient(45deg, #aebccb 0 14px, #bccad8 14px 28px);
-  border: 2px dashed rgba(70, 95, 125, 0.55);
-}
-.art-label {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 13px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  max-width: 80%;
-  text-align: center;
-  line-height: 1.5;
-}
-.hero-art .art-label {
-  color: #41566e;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.snowbank-divider {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 5; /* Foremost element overlaying the next page section transition */
-}
-
-#snow-layer {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 4; /* Snow falls over the trees, but slightly behind primary grid text content tags */
-}
-
-/* --- CONTAINER & SHARED SECTION SCHEMES --- */
-.container {
-  max-width: 1140px;
+  gap: 10px;
+  max-width: 420px;
   margin: 0 auto;
 }
-.section-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.section-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
-  font-size: clamp(34px, 5.2vw, 60px);
-  line-height: 1.04;
-  color: #2c3742;
-  margin: 14px 0 0;
-  letter-spacing: -0.5px;
-}
-.section-subtitle {
-  font-size: 18px;
-  color: #56636f;
-  line-height: 1.6;
-  margin: 20px 0 0;
-}
-
-/* --- SECTION: HOW IT PLAYS --- */
-.plays-section {
-  position: relative;
-  background: linear-gradient(180deg, #f4ecdd 0%, #e3e9ef 22%, #dde6ed 100%);
-  padding: clamp(70px, 9vw, 120px) clamp(20px, 5vw, 64px) clamp(80px, 10vw, 130px);
-}
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-  gap: 22px;
-  margin-top: 56px;
-}
-.feature-card {
-  background: #fff;
-  border-radius: 22px;
-  padding: 30px 26px;
-  box-shadow: 0 14px 34px rgba(60, 80, 110, 0.12);
-  border: 1px solid rgba(120, 140, 165, 0.14);
-}
-.card-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.icon-blue {
-  background: linear-gradient(180deg, #cfe0ee, #aac3dc);
-  box-shadow: inset 0 -3px 6px rgba(120, 150, 180, 0.4);
-}
-.icon-orange {
-  background: linear-gradient(180deg, #ffe0b3, #f6b162);
-  box-shadow: inset 0 -3px 6px rgba(210, 150, 70, 0.4);
-}
-.icon-circle {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(40, 60, 90, 0.3);
-}
-.icon-diamond {
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
-  background: #fff;
-  transform: rotate(45deg);
-  box-shadow: 0 2px 5px rgba(120, 80, 30, 0.3);
-}
-.icon-ring {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 2px 5px rgba(40, 60, 90, 0.3);
-}
-.icon-star {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
-  color: #fff;
-  font-size: 24px;
-}
-
-.card-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 22px;
-  color: #2c3742;
-  margin: 20px 0 8px;
-}
-.card-text {
-  font-size: 15.5px;
-  color: #5b6873;
-  line-height: 1.62;
-  margin: 0;
-}
-.card-text strong {
-  color: #2c3742;
-}
-
-.pitch-banner {
-  margin-top: 34px;
-  background: linear-gradient(180deg, #ffffff, #fbf5ea);
-  border: 1.5px dashed rgba(214, 140, 62, 0.5);
-  border-radius: 20px;
-  padding: 24px 30px;
-  text-align: center;
-  box-shadow: 0 10px 28px rgba(214, 140, 62, 0.1);
-}
-.banner-text {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: clamp(18px, 2.3vw, 24px);
-  color: #b3692a;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* --- SECTION: FACTIONS --- */
-.factions-section {
-  position: relative;
-  background: linear-gradient(180deg, #dde6ed 0%, #c6d3df 100%);
-  padding: clamp(70px, 9vw, 120px) clamp(20px, 5vw, 64px) clamp(80px, 10vw, 130px);
-}
-.factions-section .container {
-  max-width: 1160px;
-}
-.factions-section .section-subtitle {
-  color: #51606c;
-}
-.factions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 26px;
-  margin-top: 56px;
-}
-.faction-card {
-  border-radius: 26px;
-  overflow: hidden;
-}
-.faction-art {
-  position: relative;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.faction-glow {
-  position: absolute;
-  inset: 0;
-}
-.faction-art .art-label {
-  position: relative;
-  font-size: 12.5px;
-  max-width: 78%;
-}
-.faction-content {
-  padding: 30px 30px 34px;
-}
-.faction-badge {
-  display: inline-block;
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 5px 13px;
+.signup-input {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  padding: 14px 20px;
   border-radius: 999px;
-}
-.faction-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
-  font-size: clamp(28px, 3.4vw, 38px);
+  border: 1.5px solid rgba(90, 120, 155, 0.25);
+  background: #fbfbfb;
   color: #2c3742;
-  margin: 16px 0 0;
-  letter-spacing: -0.5px;
+  outline: none;
+  transition: border-color 0.2s;
 }
-.faction-text {
+.signup-input:focus {
+  border-color: #e1853a;
+  background: #fff;
+}
+
+.btn-primary {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
   font-size: 16px;
-  line-height: 1.62;
-  margin: 12px 0 0;
-}
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 22px;
-}
-.tag {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 7px 15px;
-  border-radius: 999px;
-}
-
-/* Misfits Specific overrides */
-.variant-misfits {
-  background: linear-gradient(180deg, #fff7ec, #fdedd8);
-  border: 1px solid rgba(214, 140, 62, 0.25);
-  box-shadow: 0 20px 46px rgba(180, 110, 40, 0.18);
-}
-.pattern-misfits {
-  background: repeating-linear-gradient(45deg, #f3c98f 0 16px, #efc081 16px 32px);
-}
-.pattern-misfits .faction-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(255, 210, 150, 0.5), transparent 70%);
-}
-.color-misfits {
-  color: #7c4d1c;
-  background: rgba(255, 255, 255, 0.82);
-}
-.badge-misfits {
-  background: #e1853a;
-}
-.faction-card.variant-misfits .faction-text {
-  color: #6b5440;
-}
-.tag-misfits {
-  color: #9c5e26;
-  background: rgba(225, 133, 58, 0.14);
-}
-
-/* Monitors Specific overrides */
-.variant-monitors {
-  background: linear-gradient(180deg, #f3f7fb, #dce8f1);
-  border: 1px solid rgba(90, 120, 155, 0.25);
-  box-shadow: 0 20px 46px rgba(50, 80, 120, 0.18);
-}
-.pattern-monitors {
-  background: repeating-linear-gradient(45deg, #a9c0d4 0 16px, #9bb5cc 16px 32px);
-}
-.pattern-monitors .faction-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(225, 238, 250, 0.5), transparent 70%);
-}
-.color-monitors {
-  color: #2f4965;
-  background: rgba(255, 255, 255, 0.85);
-}
-.badge-monitors {
-  background: #4f7398;
-}
-.faction-card.variant-monitors .faction-text {
-  color: #46586a;
-}
-.tag-monitors {
-  color: #3c5a7a;
-  background: rgba(79, 115, 152, 0.14);
-}
-
-.factions-footer-note {
-  text-align: center;
-  font-family: "Fredoka", sans-serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #5a6b7a;
-  margin: 36px 0 0;
-}
-
-/* --- SECTION: CTA --- */
-.cta-section {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, #c6d3df 0%, #d9c19a 12%, #f0bd7e 100%);
-  padding: clamp(80px, 11vw, 150px) clamp(20px, 5vw, 64px) clamp(70px, 9vw, 120px);
-}
-.cta-glow {
-  position: absolute;
-  top: -10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 720px;
-  height: 720px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 222, 165, 0.85), transparent 62%);
-  z-index: 0;
-  animation: glow 8s ease-in-out infinite;
-}
-.cta-container {
-  position: relative;
-  z-index: 3;
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-.cta-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
-  font-size: clamp(40px, 6.4vw, 76px);
-  line-height: 1;
-  color: #3a2c1a;
-  margin: 14px 0 0;
-  letter-spacing: -1px;
-}
-.cta-text {
-  font-size: 19px;
-  color: #6a5436;
-  line-height: 1.6;
-  margin: 22px auto 0;
-  max-width: 540px;
-}
-.cta-btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 38px;
-}
-.btn-cta-white {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 19px;
   color: #5b3a1e;
   text-decoration: none;
-  background: linear-gradient(180deg, #ffffff, #fff0d6);
-  padding: 17px 36px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffce86, #f3a247);
+  padding: 14px 28px;
   border-radius: 999px;
   box-shadow:
-    0 12px 30px rgba(150, 95, 35, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 6px 16px rgba(225, 140, 50, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
-.btn-cta-orange {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 19px;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(180deg, #e8884a, #d96e2f);
-  padding: 17px 36px;
-  border-radius: 999px;
-  box-shadow:
-    0 12px 30px rgba(180, 95, 40, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
-}
-.cta-meta {
-  font-family: "Fredoka", sans-serif;
-  font-size: 15px;
-  color: #8a6c45;
-  margin-top: 26px;
-  letter-spacing: 0.3px;
+.btn-primary:hover {
+  background: linear-gradient(180deg, #ffe0b3, #f6b162);
 }
 
-/* --- MAIN FOOTER --- */
-.main-footer {
-  background: #313f54;
-  padding: 40px clamp(20px, 5vw, 64px);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+@media (min-width: 480px) {
+  .signup-form {
+    flex-direction: row;
+  }
+  .signup-input {
+    flex: 1;
+  }
 }
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-}
-.footer-sphere {
-  width: 26px;
-  height: 26px;
+
+/* ====== STOLEN HERO C ENVIRONMENT GRAPHICS ====== */
+.hero-sun-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ffffff, #d3dde6 60%, #aebccb);
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 150, 0.95),
+    rgba(255, 190, 120, 0.45) 38%,
+    transparent 66%
+  );
+  animation: glow 7s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
 }
-.footer-title {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
+.horizon-treeline {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  z-index: 2;
+  opacity: 0.4;
+  pointer-events: none;
 }
-.footer-copyright {
-  font-family: "Fredoka", sans-serif;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0;
+.horizon-snow-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  z-index: 3;
+  pointer-events: none;
 }
-.footer-links {
-  display: flex;
-  gap: 22px;
-}
-.footer-links a {
-  font-weight: 700;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.78);
-  text-decoration: none;
-}
-.footer-links .footer-highlight-link {
-  color: #ffce86;
-}
-
-/* --- PERFORMANCE SNOWFALL & GLOW ANIMATIONS --- */
 #snow-layer {
   position: absolute;
   inset: 0;
@@ -666,6 +248,7 @@ nav span {
   pointer-events: none;
   z-index: 4;
 }
+
 .snowflake {
   position: absolute;
   top: -14px;
@@ -675,12 +258,141 @@ nav span {
   animation: snowfall linear infinite;
 }
 
+/* ====== PHYSICS-ACCURATE DECOUPLED ANIMATIONS ====== */
+.worker-graphic-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -10px;
+}
+
+.shovel-worker-svg {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(40, 55, 75, 0.12));
+}
+
+/* Worker Body: Ambient, slow breathing rhythm */
+.worker-body-idle {
+  transform-origin: 90px 160px;
+  animation: bodyBreathe 4.5s ease-in-out infinite;
+}
+
+/* Shovel Arm: Snappy independent digging pattern */
+.worker-arm-dig {
+  transform-origin: 85px 125px;
+  animation: armDigLoop 2.5s cubic-bezier(0.4, 0, 0.3, 1) infinite;
+}
+
+/* 1. HORIZONTAL TRACK: Moves left-to-right at a perfectly steady speed */
+.snowball-x-axis {
+  position: absolute;
+  left: 56%;
+  top: 75px;
+  pointer-events: none;
+  z-index: 15;
+
+  /* Synchronized to the shovel, running a linear path */
+  animation: throwX 2.5s linear infinite;
+}
+
+/* 2. VERTICAL TRACK: Holds the actual snowball visual, handling gravity bounce */
+.snowball-y-axis {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(40, 55, 75, 0.15);
+
+  /* Running custom gravity eases for a true rounded launch and drop */
+  animation: throwY 2.5s linear infinite;
+}
+
+/* --- SEPARATED PHYSICS KEYFRAMES --- */
+
+/* X-Axis: Hidden, then slides right smoothly, then hides again */
+@keyframes throwX {
+  0%,
+  40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(90px);
+    opacity: 1;
+  }
+  81%,
+  100% {
+    transform: translateX(90px);
+    opacity: 0;
+  }
+}
+
+/* Y-Axis: Rises up with ease-out (slowing down), falls down with ease-in (speeding up) */
+@keyframes throwY {
+  0%,
+  40% {
+    transform: translateY(0) scale(0.7);
+  }
+
+  /* Launch point to Apex (Upward Flight) */
+  42% {
+    transform: translateY(0) scale(1);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth ease-out */
+  }
+
+  /* Peak point: Notice there's no sharp corner here, it floats horizontally */
+  61% {
+    transform: translateY(-50px) scale(1.1);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); /* Smooth ease-in */
+  }
+
+  /* Impact point on ground */
+  80% {
+    transform: translateY(12px) scale(0.8);
+  }
+  100% {
+    transform: translateY(12px) scale(0.8);
+  }
+}
+
+/* Ambient environment loops */
+@keyframes bodyBreathe {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.97) translateY(1px);
+  }
+}
+@keyframes armDigLoop {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(14deg) translateY(-1px);
+  }
+  40% {
+    transform: rotate(-22deg) translateX(-2px);
+  }
+  65%,
+  85% {
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes snowfall {
   0% {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(1030px) translateX(var(--drift, 20px));
+    transform: translateY(105vh) translateX(var(--drift, 20px));
   }
 }
 @keyframes glow {
