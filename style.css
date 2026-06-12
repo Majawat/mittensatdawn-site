@@ -138,7 +138,7 @@ nav span {
 .hero-section {
   position: relative;
   min-height: clamp(700px, 95vh, 1010px);
-  background: linear-gradient(176deg, #3b4a61 0%, rgba(86, 105, 129, 0.37) 40%, #9aa9b8 100%);
+  background: linear-gradient(176deg, #1e2733 0%, rgba(51, 62, 77, 0.37) 40%, #565e66 100%);
   overflow: hidden;
 }
 .hero-grid {
@@ -210,7 +210,7 @@ nav span {
 }
 .hero-sun-glow {
   position: absolute;
-  inset: 14% 8% 16% 0;
+  inset: 0% 0% 0% 0%;
   background: radial-gradient(circle at 60% 40%, rgba(255, 190, 115, 0.5), transparent 65%);
   z-index: -1;
 }
