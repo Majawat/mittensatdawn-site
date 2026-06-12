@@ -222,7 +222,7 @@ nav span {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 26px 60px rgba(30, 45, 70, 0.4);
+  box-shadow: 0 26px 35px rgba(30, 45, 70, 0.4);
 }
 .hero-art {
   max-width: 460px;
@@ -242,18 +242,6 @@ nav span {
 .hero-art .art-label {
   color: #41566e;
   background: rgba(255, 255, 255, 0.8);
-}
-
-/* --- HORIZON LANDSCAPE --- */
-.horizon-treeline {
-  position: absolute;
-  bottom: 85px; /* Sits exactly on top of/slightly tucked behind the 90px snowbank */
-  left: 0;
-  width: 100%;
-  height: 130px; /* Matches original graphic scale */
-  z-index: 2; /* Higher than glow (z-index:1), but lower than foreground snowbank (z-index:5) */
-  opacity: 0.5; /* Retains original atmospheric opacity setting */
-  pointer-events: none;
 }
 
 .snowbank-divider {
@@ -544,7 +532,7 @@ nav span {
 .cta-section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #c6d3df 0%, #d9c19a 46%, #f0bd7e 100%);
+  background: linear-gradient(180deg, #c6d3df 0%, #d9c19a 12%, #f0bd7e 100%);
   padding: clamp(80px, 11vw, 150px) clamp(20px, 5vw, 64px) clamp(70px, 9vw, 120px);
 }
 .cta-glow {
